@@ -1,18 +1,30 @@
+# Core
 fastapi
 uvicorn
-google-genai
 python-multipart
+
+# Database
+supabase
+
+# AI/ML
+google-genai
 tavily-python
-httpx
-python-dotenv
-soccerdata
 xgboost
+scikit-learn
+catboost
+
+# Data
 pandas
 numpy
-tavily-python
+
+# HTTP
 httpx
-python-dotenv
-scikit-learn
 requests
 beautifulsoup4
+
+# Utils
+python-dotenv
 rich
+
+# EPL Predictor
+soccerdata
