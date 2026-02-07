@@ -1,0 +1,761 @@
+team,date,round,venue,result,gf,ga,opponent
+Arsenal,2025-08-17,Matchweek 1,Away,W,1,0,Manchester Utd
+Arsenal,2025-08-23,Matchweek 2,Home,W,5,0,Leeds United
+Arsenal,2025-08-31,Matchweek 3,Away,L,0,1,Liverpool
+Arsenal,2025-09-13,Matchweek 4,Home,W,3,0,Nott'ham Forest
+Arsenal,2025-09-21,Matchweek 5,Home,D,1,1,Manchester City
+Arsenal,2025-09-28,Matchweek 6,Away,W,2,1,Newcastle Utd
+Arsenal,2025-10-04,Matchweek 7,Home,W,2,0,West Ham
+Arsenal,2025-10-18,Matchweek 8,Away,W,1,0,Fulham
+Arsenal,2025-10-26,Matchweek 9,Home,W,1,0,Crystal Palace
+Arsenal,2025-11-01,Matchweek 10,Away,W,2,0,Burnley
+Arsenal,2025-11-08,Matchweek 11,Away,D,2,2,Sunderland
+Arsenal,2025-11-23,Matchweek 12,Home,W,4,1,Tottenham
+Arsenal,2025-11-30,Matchweek 13,Away,D,1,1,Chelsea
+Arsenal,2025-12-03,Matchweek 14,Home,W,2,0,Brentford
+Arsenal,2025-12-06,Matchweek 15,Away,L,1,2,Aston Villa
+Arsenal,2025-12-13,Matchweek 16,Home,W,2,1,Wolves
+Arsenal,2025-12-20,Matchweek 17,Away,W,1,0,Everton
+Arsenal,2025-12-27,Matchweek 18,Home,W,2,1,Brighton
+Arsenal,2025-12-30,Matchweek 19,Home,W,4,1,Aston Villa
+Arsenal,2026-01-03,Matchweek 20,Away,W,3,2,Bournemouth
+Arsenal,2026-01-08,Matchweek 21,Home,D,0,0,Liverpool
+Arsenal,2026-01-17,Matchweek 22,Away,,,,Nott'ham Forest
+Arsenal,2026-01-25,Matchweek 23,Home,,,,Manchester Utd
+Arsenal,2026-01-31,Matchweek 24,Away,,,,Leeds United
+Arsenal,2026-02-07,Matchweek 25,Home,,,,Sunderland
+Arsenal,2026-02-12,Matchweek 26,Away,,,,Brentford
+Arsenal,2026-02-22,Matchweek 27,Away,,,,Tottenham
+Arsenal,2026-03-01,Matchweek 28,Home,,,,Chelsea
+Arsenal,2026-03-04,Matchweek 29,Away,,,,Brighton
+Arsenal,2026-03-14,Matchweek 30,Home,,,,Everton
+Arsenal,2026-03-21,Matchweek 31,Away,,,,Wolves
+Arsenal,2026-04-11,Matchweek 32,Home,,,,Bournemouth
+Arsenal,2026-04-18,Matchweek 33,Away,,,,Manchester City
+Arsenal,2026-04-25,Matchweek 34,Home,,,,Newcastle Utd
+Arsenal,2026-05-02,Matchweek 35,Home,,,,Fulham
+Arsenal,2026-05-09,Matchweek 36,Away,,,,West Ham
+Arsenal,2026-05-17,Matchweek 37,Home,,,,Burnley
+Arsenal,2026-05-24,Matchweek 38,Away,,,,Crystal Palace
+Aston Villa,2025-08-16,Matchweek 1,Home,D,0,0,Newcastle Utd
+Aston Villa,2025-08-23,Matchweek 2,Away,L,0,1,Brentford
+Aston Villa,2025-08-31,Matchweek 3,Home,L,0,3,Crystal Palace
+Aston Villa,2025-09-13,Matchweek 4,Away,D,0,0,Everton
+Aston Villa,2025-09-21,Matchweek 5,Away,D,1,1,Sunderland
+Aston Villa,2025-09-28,Matchweek 6,Home,W,3,1,Fulham
+Aston Villa,2025-10-05,Matchweek 7,Home,W,2,1,Burnley
+Aston Villa,2025-10-19,Matchweek 8,Away,W,2,1,Tottenham
+Aston Villa,2025-10-26,Matchweek 9,Home,W,1,0,Manchester City
+Aston Villa,2025-11-01,Matchweek 10,Away,L,0,2,Liverpool
+Aston Villa,2025-11-09,Matchweek 11,Home,W,4,0,Bournemouth
+Aston Villa,2025-11-23,Matchweek 12,Away,W,2,1,Leeds United
+Aston Villa,2025-11-30,Matchweek 13,Home,W,1,0,Wolves
+Aston Villa,2025-12-03,Matchweek 14,Away,W,4,3,Brighton
+Aston Villa,2025-12-06,Matchweek 15,Home,W,2,1,Arsenal
+Aston Villa,2025-12-14,Matchweek 16,Away,W,3,2,West Ham
+Aston Villa,2025-12-21,Matchweek 17,Home,W,2,1,Manchester Utd
+Aston Villa,2025-12-27,Matchweek 18,Away,W,2,1,Chelsea
+Aston Villa,2025-12-30,Matchweek 19,Away,L,1,4,Arsenal
+Aston Villa,2026-01-03,Matchweek 20,Home,W,3,1,Nott'ham Forest
+Aston Villa,2026-01-07,Matchweek 21,Away,D,0,0,Crystal Palace
+Aston Villa,2026-01-18,Matchweek 22,Home,,,,Everton
+Aston Villa,2026-01-25,Matchweek 23,Away,,,,Newcastle Utd
+Aston Villa,2026-02-01,Matchweek 24,Home,,,,Brentford
+Aston Villa,2026-02-07,Matchweek 25,Away,,,,Bournemouth
+Aston Villa,2026-02-11,Matchweek 26,Home,,,,Brighton
+Aston Villa,2026-02-21,Matchweek 27,Home,,,,Leeds United
+Aston Villa,2026-02-27,Matchweek 28,Away,,,,Wolves
+Aston Villa,2026-03-04,Matchweek 29,Home,,,,Chelsea
+Aston Villa,2026-03-14,Matchweek 30,Away,,,,Manchester Utd
+Aston Villa,2026-03-21,Matchweek 31,Home,,,,West Ham
+Aston Villa,2026-04-11,Matchweek 32,Away,,,,Nott'ham Forest
+Aston Villa,2026-04-18,Matchweek 33,Home,,,,Sunderland
+Aston Villa,2026-04-25,Matchweek 34,Away,,,,Fulham
+Aston Villa,2026-05-02,Matchweek 35,Home,,,,Tottenham
+Aston Villa,2026-05-09,Matchweek 36,Away,,,,Burnley
+Aston Villa,2026-05-17,Matchweek 37,Home,,,,Liverpool
+Aston Villa,2026-05-24,Matchweek 38,Away,,,,Manchester City
+Bournemouth,2025-08-15,Matchweek 1,Away,L,2,4,Liverpool
+Bournemouth,2025-08-23,Matchweek 2,Home,W,1,0,Wolves
+Bournemouth,2025-08-30,Matchweek 3,Away,W,1,0,Tottenham
+Bournemouth,2025-09-13,Matchweek 4,Home,W,2,1,Brighton
+Bournemouth,2025-09-21,Matchweek 5,Home,D,0,0,Newcastle Utd
+Bournemouth,2025-09-27,Matchweek 6,Away,D,2,2,Leeds United
+Bournemouth,2025-10-03,Matchweek 7,Home,W,3,1,Fulham
+Bournemouth,2025-10-18,Matchweek 8,Away,D,3,3,Crystal Palace
+Bournemouth,2025-10-26,Matchweek 9,Home,W,2,0,Nott'ham Forest
+Bournemouth,2025-11-02,Matchweek 10,Away,L,1,3,Manchester City
+Bournemouth,2025-11-09,Matchweek 11,Away,L,0,4,Aston Villa
+Bournemouth,2025-11-22,Matchweek 12,Home,D,2,2,West Ham
+Bournemouth,2025-11-29,Matchweek 13,Away,L,2,3,Sunderland
+Bournemouth,2025-12-02,Matchweek 14,Home,L,0,1,Everton
+Bournemouth,2025-12-06,Matchweek 15,Home,D,0,0,Chelsea
+Bournemouth,2025-12-15,Matchweek 16,Away,D,4,4,Manchester Utd
+Bournemouth,2025-12-20,Matchweek 17,Home,D,1,1,Burnley
+Bournemouth,2025-12-27,Matchweek 18,Away,L,1,4,Brentford
+Bournemouth,2025-12-30,Matchweek 19,Away,D,2,2,Chelsea
+Bournemouth,2026-01-03,Matchweek 20,Home,L,2,3,Arsenal
+Bournemouth,2026-01-07,Matchweek 21,Home,W,3,2,Tottenham
+Bournemouth,2026-01-19,Matchweek 22,Away,,,,Brighton
+Bournemouth,2026-01-24,Matchweek 23,Home,,,,Liverpool
+Bournemouth,2026-01-31,Matchweek 24,Away,,,,Wolves
+Bournemouth,2026-02-07,Matchweek 25,Home,,,,Aston Villa
+Bournemouth,2026-02-10,Matchweek 26,Away,,,,Everton
+Bournemouth,2026-02-21,Matchweek 27,Away,,,,West Ham
+Bournemouth,2026-02-28,Matchweek 28,Home,,,,Sunderland
+Bournemouth,2026-03-04,Matchweek 29,Home,,,,Brentford
+Bournemouth,2026-03-14,Matchweek 30,Away,,,,Burnley
+Bournemouth,2026-03-21,Matchweek 31,Home,,,,Manchester Utd
+Bournemouth,2026-04-11,Matchweek 32,Away,,,,Arsenal
+Bournemouth,2026-04-18,Matchweek 33,Away,,,,Newcastle Utd
+Bournemouth,2026-04-25,Matchweek 34,Home,,,,Leeds United
+Bournemouth,2026-05-02,Matchweek 35,Home,,,,Crystal Palace
+Bournemouth,2026-05-09,Matchweek 36,Away,,,,Fulham
+Bournemouth,2026-05-17,Matchweek 37,Home,,,,Manchester City
+Bournemouth,2026-05-24,Matchweek 38,Away,,,,Nott'ham Forest
+Brentford,2025-08-17,Matchweek 1,Away,L,1,3,Nott'ham Forest
+Brentford,2025-08-23,Matchweek 2,Home,W,1,0,Aston Villa
+Brentford,2025-08-30,Matchweek 3,Away,L,1,2,Sunderland
+Brentford,2025-09-13,Matchweek 4,Home,D,2,2,Chelsea
+Brentford,2025-09-20,Matchweek 5,Away,L,1,3,Fulham
+Brentford,2025-09-27,Matchweek 6,Home,W,3,1,Manchester Utd
+Brentford,2025-10-05,Matchweek 7,Home,L,0,1,Manchester City
+Brentford,2025-10-20,Matchweek 8,Away,W,2,0,West Ham
+Brentford,2025-10-25,Matchweek 9,Home,W,3,2,Liverpool
+Brentford,2025-11-01,Matchweek 10,Away,L,0,2,Crystal Palace
+Brentford,2025-11-09,Matchweek 11,Home,W,3,1,Newcastle Utd
+Brentford,2025-11-22,Matchweek 12,Away,L,1,2,Brighton
+Brentford,2025-11-29,Matchweek 13,Home,W,3,1,Burnley
+Brentford,2025-12-03,Matchweek 14,Away,L,0,2,Arsenal
+Brentford,2025-12-06,Matchweek 15,Away,L,0,2,Tottenham
+Brentford,2025-12-14,Matchweek 16,Home,D,1,1,Leeds United
+Brentford,2025-12-20,Matchweek 17,Away,W,2,0,Wolves
+Brentford,2025-12-27,Matchweek 18,Home,W,4,1,Bournemouth
+Brentford,2026-01-01,Matchweek 19,Home,D,0,0,Tottenham
+Brentford,2026-01-04,Matchweek 20,Away,W,4,2,Everton
+Brentford,2026-01-07,Matchweek 21,Home,W,3,0,Sunderland
+Brentford,2026-01-17,Matchweek 22,Away,,,,Chelsea
+Brentford,2026-01-25,Matchweek 23,Home,,,,Nott'ham Forest
+Brentford,2026-02-01,Matchweek 24,Away,,,,Aston Villa
+Brentford,2026-02-07,Matchweek 25,Away,,,,Newcastle Utd
+Brentford,2026-02-12,Matchweek 26,Home,,,,Arsenal
+Brentford,2026-02-21,Matchweek 27,Home,,,,Brighton
+Brentford,2026-02-28,Matchweek 28,Away,,,,Burnley
+Brentford,2026-03-04,Matchweek 29,Away,,,,Bournemouth
+Brentford,2026-03-14,Matchweek 30,Home,,,,Wolves
+Brentford,2026-03-21,Matchweek 31,Away,,,,Leeds United
+Brentford,2026-04-11,Matchweek 32,Home,,,,Everton
+Brentford,2026-04-18,Matchweek 33,Home,,,,Fulham
+Brentford,2026-04-25,Matchweek 34,Away,,,,Manchester Utd
+Brentford,2026-05-02,Matchweek 35,Home,,,,West Ham
+Brentford,2026-05-09,Matchweek 36,Away,,,,Manchester City
+Brentford,2026-05-17,Matchweek 37,Home,,,,Crystal Palace
+Brentford,2026-05-24,Matchweek 38,Away,,,,Liverpool
+Brighton,2025-08-16,Matchweek 1,Home,D,1,1,Fulham
+Brighton,2025-08-24,Matchweek 2,Away,L,0,2,Everton
+Brighton,2025-08-31,Matchweek 3,Home,W,2,1,Manchester City
+Brighton,2025-09-13,Matchweek 4,Away,L,1,2,Bournemouth
+Brighton,2025-09-20,Matchweek 5,Home,D,2,2,Tottenham
+Brighton,2025-09-27,Matchweek 6,Away,W,3,1,Chelsea
+Brighton,2025-10-05,Matchweek 7,Away,D,1,1,Wolves
+Brighton,2025-10-18,Matchweek 8,Home,W,2,1,Newcastle Utd
+Brighton,2025-10-25,Matchweek 9,Away,L,2,4,Manchester Utd
+Brighton,2025-11-01,Matchweek 10,Home,W,3,0,Leeds United
+Brighton,2025-11-09,Matchweek 11,Away,D,0,0,Crystal Palace
+Brighton,2025-11-22,Matchweek 12,Home,W,2,1,Brentford
+Brighton,2025-11-30,Matchweek 13,Away,W,2,0,Nott'ham Forest
+Brighton,2025-12-03,Matchweek 14,Home,L,3,4,Aston Villa
+Brighton,2025-12-07,Matchweek 15,Home,D,1,1,West Ham
+Brighton,2025-12-13,Matchweek 16,Away,L,0,2,Liverpool
+Brighton,2025-12-20,Matchweek 17,Home,D,0,0,Sunderland
+Brighton,2025-12-27,Matchweek 18,Away,L,1,2,Arsenal
+Brighton,2025-12-30,Matchweek 19,Away,D,2,2,West Ham
+Brighton,2026-01-03,Matchweek 20,Home,W,2,0,Burnley
+Brighton,2026-01-07,Matchweek 21,Away,D,1,1,Manchester City
+Brighton,2026-01-19,Matchweek 22,Home,,,,Bournemouth
+Brighton,2026-01-24,Matchweek 23,Away,,,,Fulham
+Brighton,2026-01-31,Matchweek 24,Home,,,,Everton
+Brighton,2026-02-08,Matchweek 25,Home,,,,Crystal Palace
+Brighton,2026-02-11,Matchweek 26,Away,,,,Aston Villa
+Brighton,2026-02-21,Matchweek 27,Away,,,,Brentford
+Brighton,2026-02-28,Matchweek 28,Home,,,,Nott'ham Forest
+Brighton,2026-03-04,Matchweek 29,Home,,,,Arsenal
+Brighton,2026-03-14,Matchweek 30,Away,,,,Sunderland
+Brighton,2026-03-21,Matchweek 31,Home,,,,Liverpool
+Brighton,2026-04-11,Matchweek 32,Away,,,,Burnley
+Brighton,2026-04-18,Matchweek 33,Away,,,,Tottenham
+Brighton,2026-04-25,Matchweek 34,Home,,,,Chelsea
+Brighton,2026-05-02,Matchweek 35,Away,,,,Newcastle Utd
+Brighton,2026-05-09,Matchweek 36,Home,,,,Wolves
+Brighton,2026-05-17,Matchweek 37,Away,,,,Leeds United
+Brighton,2026-05-24,Matchweek 38,Home,,,,Manchester Utd
+Burnley,2025-08-16,Matchweek 1,Away,L,0,3,Tottenham
+Burnley,2025-08-23,Matchweek 2,Home,W,2,0,Sunderland
+Burnley,2025-08-30,Matchweek 3,Away,L,2,3,Manchester Utd
+Burnley,2025-09-14,Matchweek 4,Home,L,0,1,Liverpool
+Burnley,2025-09-20,Matchweek 5,Home,D,1,1,Nott'ham Forest
+Burnley,2025-09-27,Matchweek 6,Away,L,1,5,Manchester City
+Burnley,2025-10-05,Matchweek 7,Away,L,1,2,Aston Villa
+Burnley,2025-10-18,Matchweek 8,Home,W,2,0,Leeds United
+Burnley,2025-10-26,Matchweek 9,Away,W,3,2,Wolves
+Burnley,2025-11-01,Matchweek 10,Home,L,0,2,Arsenal
+Burnley,2025-11-08,Matchweek 11,Away,L,2,3,West Ham
+Burnley,2025-11-22,Matchweek 12,Home,L,0,2,Chelsea
+Burnley,2025-11-29,Matchweek 13,Away,L,1,3,Brentford
+Burnley,2025-12-03,Matchweek 14,Home,L,0,1,Crystal Palace
+Burnley,2025-12-06,Matchweek 15,Away,L,1,2,Newcastle Utd
+Burnley,2025-12-13,Matchweek 16,Home,L,2,3,Fulham
+Burnley,2025-12-20,Matchweek 17,Away,D,1,1,Bournemouth
+Burnley,2025-12-27,Matchweek 18,Home,D,0,0,Everton
+Burnley,2025-12-30,Matchweek 19,Home,L,1,3,Newcastle Utd
+Burnley,2026-01-03,Matchweek 20,Away,L,0,2,Brighton
+Burnley,2026-01-07,Matchweek 21,Home,D,2,2,Manchester Utd
+Burnley,2026-01-17,Matchweek 22,Away,,,,Liverpool
+Burnley,2026-01-24,Matchweek 23,Home,,,,Tottenham
+Burnley,2026-02-02,Matchweek 24,Away,,,,Sunderland
+Burnley,2026-02-07,Matchweek 25,Home,,,,West Ham
+Burnley,2026-02-11,Matchweek 26,Away,,,,Crystal Palace
+Burnley,2026-02-21,Matchweek 27,Away,,,,Chelsea
+Burnley,2026-02-28,Matchweek 28,Home,,,,Brentford
+Burnley,2026-03-04,Matchweek 29,Away,,,,Everton
+Burnley,2026-03-14,Matchweek 30,Home,,,,Bournemouth
+Burnley,2026-03-21,Matchweek 31,Away,,,,Fulham
+Burnley,2026-04-11,Matchweek 32,Home,,,,Brighton
+Burnley,2026-04-18,Matchweek 33,Away,,,,Nott'ham Forest
+Burnley,2026-04-25,Matchweek 34,Home,,,,Manchester City
+Burnley,2026-05-02,Matchweek 35,Away,,,,Leeds United
+Burnley,2026-05-09,Matchweek 36,Home,,,,Aston Villa
+Burnley,2026-05-17,Matchweek 37,Away,,,,Arsenal
+Burnley,2026-05-24,Matchweek 38,Home,,,,Wolves
+Chelsea,2025-08-17,Matchweek 1,Home,D,0,0,Crystal Palace
+Chelsea,2025-08-22,Matchweek 2,Away,W,5,1,West Ham
+Chelsea,2025-08-30,Matchweek 3,Home,W,2,0,Fulham
+Chelsea,2025-09-13,Matchweek 4,Away,D,2,2,Brentford
+Chelsea,2025-09-20,Matchweek 5,Away,L,1,2,Manchester Utd
+Chelsea,2025-09-27,Matchweek 6,Home,L,1,3,Brighton
+Chelsea,2025-10-04,Matchweek 7,Home,W,2,1,Liverpool
+Chelsea,2025-10-18,Matchweek 8,Away,W,3,0,Nott'ham Forest
+Chelsea,2025-10-25,Matchweek 9,Home,L,1,2,Sunderland
+Chelsea,2025-11-01,Matchweek 10,Away,W,1,0,Tottenham
+Chelsea,2025-11-08,Matchweek 11,Home,W,3,0,Wolves
+Chelsea,2025-11-22,Matchweek 12,Away,W,2,0,Burnley
+Chelsea,2025-11-30,Matchweek 13,Home,D,1,1,Arsenal
+Chelsea,2025-12-03,Matchweek 14,Away,L,1,3,Leeds United
+Chelsea,2025-12-06,Matchweek 15,Away,D,0,0,Bournemouth
+Chelsea,2025-12-13,Matchweek 16,Home,W,2,0,Everton
+Chelsea,2025-12-20,Matchweek 17,Away,D,2,2,Newcastle Utd
+Chelsea,2025-12-27,Matchweek 18,Home,L,1,2,Aston Villa
+Chelsea,2025-12-30,Matchweek 19,Home,D,2,2,Bournemouth
+Chelsea,2026-01-04,Matchweek 20,Away,D,1,1,Manchester City
+Chelsea,2026-01-07,Matchweek 21,Away,L,1,2,Fulham
+Chelsea,2026-01-17,Matchweek 22,Home,,,,Brentford
+Chelsea,2026-01-25,Matchweek 23,Away,,,,Crystal Palace
+Chelsea,2026-01-31,Matchweek 24,Home,,,,West Ham
+Chelsea,2026-02-07,Matchweek 25,Away,,,,Wolves
+Chelsea,2026-02-10,Matchweek 26,Home,,,,Leeds United
+Chelsea,2026-02-21,Matchweek 27,Home,,,,Burnley
+Chelsea,2026-03-01,Matchweek 28,Away,,,,Arsenal
+Chelsea,2026-03-04,Matchweek 29,Away,,,,Aston Villa
+Chelsea,2026-03-14,Matchweek 30,Home,,,,Newcastle Utd
+Chelsea,2026-03-21,Matchweek 31,Away,,,,Everton
+Chelsea,2026-04-11,Matchweek 32,Home,,,,Manchester City
+Chelsea,2026-04-18,Matchweek 33,Home,,,,Manchester Utd
+Chelsea,2026-04-25,Matchweek 34,Away,,,,Brighton
+Chelsea,2026-05-02,Matchweek 35,Home,,,,Nott'ham Forest
+Chelsea,2026-05-09,Matchweek 36,Away,,,,Liverpool
+Chelsea,2026-05-17,Matchweek 37,Home,,,,Tottenham
+Chelsea,2026-05-24,Matchweek 38,Away,,,,Sunderland
+Crystal Palace,2025-08-17,Matchweek 1,Away,D,0,0,Chelsea
+Crystal Palace,2025-08-24,Matchweek 2,Home,D,1,1,Nott'ham Forest
+Crystal Palace,2025-08-31,Matchweek 3,Away,W,3,0,Aston Villa
+Crystal Palace,2025-09-13,Matchweek 4,Home,D,0,0,Sunderland
+Crystal Palace,2025-09-20,Matchweek 5,Away,W,2,1,West Ham
+Crystal Palace,2025-09-27,Matchweek 6,Home,W,2,1,Liverpool
+Crystal Palace,2025-10-05,Matchweek 7,Away,L,1,2,Everton
+Crystal Palace,2025-10-18,Matchweek 8,Home,D,3,3,Bournemouth
+Crystal Palace,2025-10-26,Matchweek 9,Away,L,0,1,Arsenal
+Crystal Palace,2025-11-01,Matchweek 10,Home,W,2,0,Brentford
+Crystal Palace,2025-11-09,Matchweek 11,Home,D,0,0,Brighton
+Crystal Palace,2025-11-22,Matchweek 12,Away,W,2,0,Wolves
+Crystal Palace,2025-11-30,Matchweek 13,Home,L,1,2,Manchester Utd
+Crystal Palace,2025-12-03,Matchweek 14,Away,W,1,0,Burnley
+Crystal Palace,2025-12-07,Matchweek 15,Away,W,2,1,Fulham
+Crystal Palace,2025-12-14,Matchweek 16,Home,L,0,3,Manchester City
+Crystal Palace,2025-12-20,Matchweek 17,Away,L,1,4,Leeds United
+Crystal Palace,2025-12-28,Matchweek 18,Home,L,0,1,Tottenham
+Crystal Palace,2026-01-01,Matchweek 19,Home,D,1,1,Fulham
+Crystal Palace,2026-01-04,Matchweek 20,Away,L,0,2,Newcastle Utd
+Crystal Palace,2026-01-07,Matchweek 21,Home,D,0,0,Aston Villa
+Crystal Palace,2026-01-17,Matchweek 22,Away,,,,Sunderland
+Crystal Palace,2026-01-25,Matchweek 23,Home,,,,Chelsea
+Crystal Palace,2026-02-01,Matchweek 24,Away,,,,Nott'ham Forest
+Crystal Palace,2026-02-08,Matchweek 25,Away,,,,Brighton
+Crystal Palace,2026-02-11,Matchweek 26,Home,,,,Burnley
+Crystal Palace,2026-02-21,Matchweek 27,Home,,,,Wolves
+Crystal Palace,2026-02-28,Matchweek 28,Away,,,,Manchester Utd
+Crystal Palace,2026-03-04,Matchweek 29,Away,,,,Tottenham
+Crystal Palace,2026-03-14,Matchweek 30,Home,,,,Leeds United
+Crystal Palace,2026-03-21,Matchweek 31,Away,,,,Manchester City
+Crystal Palace,2026-04-11,Matchweek 32,Home,,,,Newcastle Utd
+Crystal Palace,2026-04-18,Matchweek 33,Home,,,,West Ham
+Crystal Palace,2026-04-25,Matchweek 34,Away,,,,Liverpool
+Crystal Palace,2026-05-02,Matchweek 35,Away,,,,Bournemouth
+Crystal Palace,2026-05-09,Matchweek 36,Home,,,,Everton
+Crystal Palace,2026-05-17,Matchweek 37,Away,,,,Brentford
+Crystal Palace,2026-05-24,Matchweek 38,Home,,,,Arsenal
+Everton,2025-08-18,Matchweek 1,Away,L,0,1,Leeds United
+Everton,2025-08-24,Matchweek 2,Home,W,2,0,Brighton
+Everton,2025-08-30,Matchweek 3,Away,W,3,2,Wolves
+Everton,2025-09-13,Matchweek 4,Home,D,0,0,Aston Villa
+Everton,2025-09-20,Matchweek 5,Away,L,1,2,Liverpool
+Everton,2025-09-29,Matchweek 6,Home,D,1,1,West Ham
+Everton,2025-10-05,Matchweek 7,Home,W,2,1,Crystal Palace
+Everton,2025-10-18,Matchweek 8,Away,L,0,2,Manchester City
+Everton,2025-10-26,Matchweek 9,Home,L,0,3,Tottenham
+Everton,2025-11-03,Matchweek 10,Away,D,1,1,Sunderland
+Everton,2025-11-08,Matchweek 11,Home,W,2,0,Fulham
+Everton,2025-11-24,Matchweek 12,Away,W,1,0,Manchester Utd
+Everton,2025-11-29,Matchweek 13,Home,L,1,4,Newcastle Utd
+Everton,2025-12-02,Matchweek 14,Away,W,1,0,Bournemouth
+Everton,2025-12-06,Matchweek 15,Home,W,3,0,Nott'ham Forest
+Everton,2025-12-13,Matchweek 16,Away,L,0,2,Chelsea
+Everton,2025-12-20,Matchweek 17,Home,L,0,1,Arsenal
+Everton,2025-12-27,Matchweek 18,Away,D,0,0,Burnley
+Everton,2025-12-30,Matchweek 19,Away,W,2,0,Nott'ham Forest
+Everton,2026-01-04,Matchweek 20,Home,L,2,4,Brentford
+Everton,2026-01-07,Matchweek 21,Home,D,1,1,Wolves
+Everton,2026-01-18,Matchweek 22,Away,,,,Aston Villa
+Everton,2026-01-26,Matchweek 23,Home,,,,Leeds United
+Everton,2026-01-31,Matchweek 24,Away,,,,Brighton
+Everton,2026-02-07,Matchweek 25,Away,,,,Fulham
+Everton,2026-02-10,Matchweek 26,Home,,,,Bournemouth
+Everton,2026-02-23,Matchweek 27,Home,,,,Manchester Utd
+Everton,2026-02-28,Matchweek 28,Away,,,,Newcastle Utd
+Everton,2026-03-04,Matchweek 29,Home,,,,Burnley
+Everton,2026-03-14,Matchweek 30,Away,,,,Arsenal
+Everton,2026-03-21,Matchweek 31,Home,,,,Chelsea
+Everton,2026-04-11,Matchweek 32,Away,,,,Brentford
+Everton,2026-04-18,Matchweek 33,Home,,,,Liverpool
+Everton,2026-04-25,Matchweek 34,Away,,,,West Ham
+Everton,2026-05-02,Matchweek 35,Home,,,,Manchester City
+Everton,2026-05-09,Matchweek 36,Away,,,,Crystal Palace
+Everton,2026-05-17,Matchweek 37,Home,,,,Sunderland
+Everton,2026-05-24,Matchweek 38,Away,,,,Tottenham
+Fulham,2025-08-16,Matchweek 1,Away,D,1,1,Brighton
+Fulham,2025-08-24,Matchweek 2,Home,D,1,1,Manchester Utd
+Fulham,2025-08-30,Matchweek 3,Away,L,0,2,Chelsea
+Fulham,2025-09-13,Matchweek 4,Home,W,1,0,Leeds United
+Fulham,2025-09-20,Matchweek 5,Home,W,3,1,Brentford
+Fulham,2025-09-28,Matchweek 6,Away,L,1,3,Aston Villa
+Fulham,2025-10-03,Matchweek 7,Away,L,1,3,Bournemouth
+Fulham,2025-10-18,Matchweek 8,Home,L,0,1,Arsenal
+Fulham,2025-10-25,Matchweek 9,Away,L,1,2,Newcastle Utd
+Fulham,2025-11-01,Matchweek 10,Home,W,3,0,Wolves
+Fulham,2025-11-08,Matchweek 11,Away,L,0,2,Everton
+Fulham,2025-11-22,Matchweek 12,Home,W,1,0,Sunderland
+Fulham,2025-11-29,Matchweek 13,Away,W,2,1,Tottenham
+Fulham,2025-12-02,Matchweek 14,Home,L,4,5,Manchester City
+Fulham,2025-12-07,Matchweek 15,Home,L,1,2,Crystal Palace
+Fulham,2025-12-13,Matchweek 16,Away,W,3,2,Burnley
+Fulham,2025-12-22,Matchweek 17,Home,W,1,0,Nott'ham Forest
+Fulham,2025-12-27,Matchweek 18,Away,W,1,0,West Ham
+Fulham,2026-01-01,Matchweek 19,Away,D,1,1,Crystal Palace
+Fulham,2026-01-04,Matchweek 20,Home,D,2,2,Liverpool
+Fulham,2026-01-07,Matchweek 21,Home,W,2,1,Chelsea
+Fulham,2026-01-17,Matchweek 22,Away,,,,Leeds United
+Fulham,2026-01-24,Matchweek 23,Home,,,,Brighton
+Fulham,2026-02-01,Matchweek 24,Away,,,,Manchester Utd
+Fulham,2026-02-07,Matchweek 25,Home,,,,Everton
+Fulham,2026-02-11,Matchweek 26,Away,,,,Manchester City
+Fulham,2026-02-22,Matchweek 27,Away,,,,Sunderland
+Fulham,2026-03-01,Matchweek 28,Home,,,,Tottenham
+Fulham,2026-03-04,Matchweek 29,Home,,,,West Ham
+Fulham,2026-03-14,Matchweek 30,Away,,,,Nott'ham Forest
+Fulham,2026-03-21,Matchweek 31,Home,,,,Burnley
+Fulham,2026-04-11,Matchweek 32,Away,,,,Liverpool
+Fulham,2026-04-18,Matchweek 33,Away,,,,Brentford
+Fulham,2026-04-25,Matchweek 34,Home,,,,Aston Villa
+Fulham,2026-05-02,Matchweek 35,Away,,,,Arsenal
+Fulham,2026-05-09,Matchweek 36,Home,,,,Bournemouth
+Fulham,2026-05-17,Matchweek 37,Away,,,,Wolves
+Fulham,2026-05-24,Matchweek 38,Home,,,,Newcastle Utd
+Leeds United,2025-08-18,Matchweek 1,Home,W,1,0,Everton
+Leeds United,2025-08-23,Matchweek 2,Away,L,0,5,Arsenal
+Leeds United,2025-08-30,Matchweek 3,Home,D,0,0,Newcastle Utd
+Leeds United,2025-09-13,Matchweek 4,Away,L,0,1,Fulham
+Leeds United,2025-09-20,Matchweek 5,Away,W,3,1,Wolves
+Leeds United,2025-09-27,Matchweek 6,Home,D,2,2,Bournemouth
+Leeds United,2025-10-04,Matchweek 7,Home,L,1,2,Tottenham
+Leeds United,2025-10-18,Matchweek 8,Away,L,0,2,Burnley
+Leeds United,2025-10-24,Matchweek 9,Home,W,2,1,West Ham
+Leeds United,2025-11-01,Matchweek 10,Away,L,0,3,Brighton
+Leeds United,2025-11-09,Matchweek 11,Away,L,1,3,Nott'ham Forest
+Leeds United,2025-11-23,Matchweek 12,Home,L,1,2,Aston Villa
+Leeds United,2025-11-29,Matchweek 13,Away,L,2,3,Manchester City
+Leeds United,2025-12-03,Matchweek 14,Home,W,3,1,Chelsea
+Leeds United,2025-12-06,Matchweek 15,Home,D,3,3,Liverpool
+Leeds United,2025-12-14,Matchweek 16,Away,D,1,1,Brentford
+Leeds United,2025-12-20,Matchweek 17,Home,W,4,1,Crystal Palace
+Leeds United,2025-12-28,Matchweek 18,Away,D,1,1,Sunderland
+Leeds United,2026-01-01,Matchweek 19,Away,D,0,0,Liverpool
+Leeds United,2026-01-04,Matchweek 20,Home,D,1,1,Manchester Utd
+Leeds United,2026-01-07,Matchweek 21,Away,L,3,4,Newcastle Utd
+Leeds United,2026-01-17,Matchweek 22,Home,,,,Fulham
+Leeds United,2026-01-26,Matchweek 23,Away,,,,Everton
+Leeds United,2026-01-31,Matchweek 24,Home,,,,Arsenal
+Leeds United,2026-02-06,Matchweek 25,Home,,,,Nott'ham Forest
+Leeds United,2026-02-10,Matchweek 26,Away,,,,Chelsea
+Leeds United,2026-02-21,Matchweek 27,Away,,,,Aston Villa
+Leeds United,2026-02-28,Matchweek 28,Home,,,,Manchester City
+Leeds United,2026-03-04,Matchweek 29,Home,,,,Sunderland
+Leeds United,2026-03-14,Matchweek 30,Away,,,,Crystal Palace
+Leeds United,2026-03-21,Matchweek 31,Home,,,,Brentford
+Leeds United,2026-04-11,Matchweek 32,Away,,,,Manchester Utd
+Leeds United,2026-04-18,Matchweek 33,Home,,,,Wolves
+Leeds United,2026-04-25,Matchweek 34,Away,,,,Bournemouth
+Leeds United,2026-05-02,Matchweek 35,Home,,,,Burnley
+Leeds United,2026-05-09,Matchweek 36,Away,,,,Tottenham
+Leeds United,2026-05-17,Matchweek 37,Home,,,,Brighton
+Leeds United,2026-05-24,Matchweek 38,Away,,,,West Ham
+Liverpool,2025-08-15,Matchweek 1,Home,W,4,2,Bournemouth
+Liverpool,2025-08-25,Matchweek 2,Away,W,3,2,Newcastle Utd
+Liverpool,2025-08-31,Matchweek 3,Home,W,1,0,Arsenal
+Liverpool,2025-09-14,Matchweek 4,Away,W,1,0,Burnley
+Liverpool,2025-09-20,Matchweek 5,Home,W,2,1,Everton
+Liverpool,2025-09-27,Matchweek 6,Away,L,1,2,Crystal Palace
+Liverpool,2025-10-04,Matchweek 7,Away,L,1,2,Chelsea
+Liverpool,2025-10-19,Matchweek 8,Home,L,1,2,Manchester Utd
+Liverpool,2025-10-25,Matchweek 9,Away,L,2,3,Brentford
+Liverpool,2025-11-01,Matchweek 10,Home,W,2,0,Aston Villa
+Liverpool,2025-11-09,Matchweek 11,Away,L,0,3,Manchester City
+Liverpool,2025-11-22,Matchweek 12,Home,L,0,3,Nott'ham Forest
+Liverpool,2025-11-30,Matchweek 13,Away,W,2,0,West Ham
+Liverpool,2025-12-03,Matchweek 14,Home,D,1,1,Sunderland
+Liverpool,2025-12-06,Matchweek 15,Away,D,3,3,Leeds United
+Liverpool,2025-12-13,Matchweek 16,Home,W,2,0,Brighton
+Liverpool,2025-12-20,Matchweek 17,Away,W,2,1,Tottenham
+Liverpool,2025-12-27,Matchweek 18,Home,W,2,1,Wolves
+Liverpool,2026-01-01,Matchweek 19,Home,D,0,0,Leeds United
+Liverpool,2026-01-04,Matchweek 20,Away,D,2,2,Fulham
+Liverpool,2026-01-08,Matchweek 21,Away,D,0,0,Arsenal
+Liverpool,2026-01-17,Matchweek 22,Home,,,,Burnley
+Liverpool,2026-01-24,Matchweek 23,Away,,,,Bournemouth
+Liverpool,2026-01-31,Matchweek 24,Home,,,,Newcastle Utd
+Liverpool,2026-02-08,Matchweek 25,Home,,,,Manchester City
+Liverpool,2026-02-11,Matchweek 26,Away,,,,Sunderland
+Liverpool,2026-02-21,Matchweek 27,Away,,,,Nott'ham Forest
+Liverpool,2026-02-28,Matchweek 28,Home,,,,West Ham
+Liverpool,2026-03-04,Matchweek 29,Away,,,,Wolves
+Liverpool,2026-03-14,Matchweek 30,Home,,,,Tottenham
+Liverpool,2026-03-21,Matchweek 31,Away,,,,Brighton
+Liverpool,2026-04-11,Matchweek 32,Home,,,,Fulham
+Liverpool,2026-04-18,Matchweek 33,Away,,,,Everton
+Liverpool,2026-04-25,Matchweek 34,Home,,,,Crystal Palace
+Liverpool,2026-05-02,Matchweek 35,Away,,,,Manchester Utd
+Liverpool,2026-05-09,Matchweek 36,Home,,,,Chelsea
+Liverpool,2026-05-17,Matchweek 37,Away,,,,Aston Villa
+Liverpool,2026-05-24,Matchweek 38,Home,,,,Brentford
+Manchester City,2025-08-16,Matchweek 1,Away,W,4,0,Wolves
+Manchester City,2025-08-23,Matchweek 2,Home,L,0,2,Tottenham
+Manchester City,2025-08-31,Matchweek 3,Away,L,1,2,Brighton
+Manchester City,2025-09-14,Matchweek 4,Home,W,3,0,Manchester Utd
+Manchester City,2025-09-21,Matchweek 5,Away,D,1,1,Arsenal
+Manchester City,2025-09-27,Matchweek 6,Home,W,5,1,Burnley
+Manchester City,2025-10-05,Matchweek 7,Away,W,1,0,Brentford
+Manchester City,2025-10-18,Matchweek 8,Home,W,2,0,Everton
+Manchester City,2025-10-26,Matchweek 9,Away,L,0,1,Aston Villa
+Manchester City,2025-11-02,Matchweek 10,Home,W,3,1,Bournemouth
+Manchester City,2025-11-09,Matchweek 11,Home,W,3,0,Liverpool
+Manchester City,2025-11-22,Matchweek 12,Away,L,1,2,Newcastle Utd
+Manchester City,2025-11-29,Matchweek 13,Home,W,3,2,Leeds United
+Manchester City,2025-12-02,Matchweek 14,Away,W,5,4,Fulham
+Manchester City,2025-12-06,Matchweek 15,Home,W,3,0,Sunderland
+Manchester City,2025-12-14,Matchweek 16,Away,W,3,0,Crystal Palace
+Manchester City,2025-12-20,Matchweek 17,Home,W,3,0,West Ham
+Manchester City,2025-12-27,Matchweek 18,Away,W,2,1,Nott'ham Forest
+Manchester City,2026-01-01,Matchweek 19,Away,D,0,0,Sunderland
+Manchester City,2026-01-04,Matchweek 20,Home,D,1,1,Chelsea
+Manchester City,2026-01-07,Matchweek 21,Home,D,1,1,Brighton
+Manchester City,2026-01-17,Matchweek 22,Away,,,,Manchester Utd
+Manchester City,2026-01-24,Matchweek 23,Home,,,,Wolves
+Manchester City,2026-02-01,Matchweek 24,Away,,,,Tottenham
+Manchester City,2026-02-08,Matchweek 25,Away,,,,Liverpool
+Manchester City,2026-02-11,Matchweek 26,Home,,,,Fulham
+Manchester City,2026-02-21,Matchweek 27,Home,,,,Newcastle Utd
+Manchester City,2026-02-28,Matchweek 28,Away,,,,Leeds United
+Manchester City,2026-03-04,Matchweek 29,Home,,,,Nott'ham Forest
+Manchester City,2026-03-14,Matchweek 30,Away,,,,West Ham
+Manchester City,2026-03-21,Matchweek 31,Home,,,,Crystal Palace
+Manchester City,2026-04-11,Matchweek 32,Away,,,,Chelsea
+Manchester City,2026-04-18,Matchweek 33,Home,,,,Arsenal
+Manchester City,2026-04-25,Matchweek 34,Away,,,,Burnley
+Manchester City,2026-05-02,Matchweek 35,Away,,,,Everton
+Manchester City,2026-05-09,Matchweek 36,Home,,,,Brentford
+Manchester City,2026-05-17,Matchweek 37,Away,,,,Bournemouth
+Manchester City,2026-05-24,Matchweek 38,Home,,,,Aston Villa
+Manchester Utd,2025-08-17,Matchweek 1,Home,L,0,1,Arsenal
+Manchester Utd,2025-08-24,Matchweek 2,Away,D,1,1,Fulham
+Manchester Utd,2025-08-30,Matchweek 3,Home,W,3,2,Burnley
+Manchester Utd,2025-09-14,Matchweek 4,Away,L,0,3,Manchester City
+Manchester Utd,2025-09-20,Matchweek 5,Home,W,2,1,Chelsea
+Manchester Utd,2025-09-27,Matchweek 6,Away,L,1,3,Brentford
+Manchester Utd,2025-10-04,Matchweek 7,Home,W,2,0,Sunderland
+Manchester Utd,2025-10-19,Matchweek 8,Away,W,2,1,Liverpool
+Manchester Utd,2025-10-25,Matchweek 9,Home,W,4,2,Brighton
+Manchester Utd,2025-11-01,Matchweek 10,Away,D,2,2,Nott'ham Forest
+Manchester Utd,2025-11-08,Matchweek 11,Away,D,2,2,Tottenham
+Manchester Utd,2025-11-24,Matchweek 12,Home,L,0,1,Everton
+Manchester Utd,2025-11-30,Matchweek 13,Away,W,2,1,Crystal Palace
+Manchester Utd,2025-12-04,Matchweek 14,Home,D,1,1,West Ham
+Manchester Utd,2025-12-08,Matchweek 15,Away,W,4,1,Wolves
+Manchester Utd,2025-12-15,Matchweek 16,Home,D,4,4,Bournemouth
+Manchester Utd,2025-12-21,Matchweek 17,Away,L,1,2,Aston Villa
+Manchester Utd,2025-12-26,Matchweek 18,Home,W,1,0,Newcastle Utd
+Manchester Utd,2025-12-30,Matchweek 19,Home,D,1,1,Wolves
+Manchester Utd,2026-01-04,Matchweek 20,Away,D,1,1,Leeds United
+Manchester Utd,2026-01-07,Matchweek 21,Away,D,2,2,Burnley
+Manchester Utd,2026-01-17,Matchweek 22,Home,,,,Manchester City
+Manchester Utd,2026-01-25,Matchweek 23,Away,,,,Arsenal
+Manchester Utd,2026-02-01,Matchweek 24,Home,,,,Fulham
+Manchester Utd,2026-02-07,Matchweek 25,Home,,,,Tottenham
+Manchester Utd,2026-02-10,Matchweek 26,Away,,,,West Ham
+Manchester Utd,2026-02-23,Matchweek 27,Away,,,,Everton
+Manchester Utd,2026-02-28,Matchweek 28,Home,,,,Crystal Palace
+Manchester Utd,2026-03-04,Matchweek 29,Away,,,,Newcastle Utd
+Manchester Utd,2026-03-14,Matchweek 30,Home,,,,Aston Villa
+Manchester Utd,2026-03-21,Matchweek 31,Away,,,,Bournemouth
+Manchester Utd,2026-04-11,Matchweek 32,Home,,,,Leeds United
+Manchester Utd,2026-04-18,Matchweek 33,Away,,,,Chelsea
+Manchester Utd,2026-04-25,Matchweek 34,Home,,,,Brentford
+Manchester Utd,2026-05-02,Matchweek 35,Home,,,,Liverpool
+Manchester Utd,2026-05-09,Matchweek 36,Away,,,,Sunderland
+Manchester Utd,2026-05-17,Matchweek 37,Home,,,,Nott'ham Forest
+Manchester Utd,2026-05-24,Matchweek 38,Away,,,,Brighton
+Newcastle Utd,2025-08-16,Matchweek 1,Away,D,0,0,Aston Villa
+Newcastle Utd,2025-08-25,Matchweek 2,Home,L,2,3,Liverpool
+Newcastle Utd,2025-08-30,Matchweek 3,Away,D,0,0,Leeds United
+Newcastle Utd,2025-09-13,Matchweek 4,Home,W,1,0,Wolves
+Newcastle Utd,2025-09-21,Matchweek 5,Away,D,0,0,Bournemouth
+Newcastle Utd,2025-09-28,Matchweek 6,Home,L,1,2,Arsenal
+Newcastle Utd,2025-10-05,Matchweek 7,Home,W,2,0,Nott'ham Forest
+Newcastle Utd,2025-10-18,Matchweek 8,Away,L,1,2,Brighton
+Newcastle Utd,2025-10-25,Matchweek 9,Home,W,2,1,Fulham
+Newcastle Utd,2025-11-02,Matchweek 10,Away,L,1,3,West Ham
+Newcastle Utd,2025-11-09,Matchweek 11,Away,L,1,3,Brentford
+Newcastle Utd,2025-11-22,Matchweek 12,Home,W,2,1,Manchester City
+Newcastle Utd,2025-11-29,Matchweek 13,Away,W,4,1,Everton
+Newcastle Utd,2025-12-02,Matchweek 14,Home,D,2,2,Tottenham
+Newcastle Utd,2025-12-06,Matchweek 15,Home,W,2,1,Burnley
+Newcastle Utd,2025-12-14,Matchweek 16,Away,L,0,1,Sunderland
+Newcastle Utd,2025-12-20,Matchweek 17,Home,D,2,2,Chelsea
+Newcastle Utd,2025-12-26,Matchweek 18,Away,L,0,1,Manchester Utd
+Newcastle Utd,2025-12-30,Matchweek 19,Away,W,3,1,Burnley
+Newcastle Utd,2026-01-04,Matchweek 20,Home,W,2,0,Crystal Palace
+Newcastle Utd,2026-01-07,Matchweek 21,Home,W,4,3,Leeds United
+Newcastle Utd,2026-01-18,Matchweek 22,Away,,,,Wolves
+Newcastle Utd,2026-01-25,Matchweek 23,Home,,,,Aston Villa
+Newcastle Utd,2026-01-31,Matchweek 24,Away,,,,Liverpool
+Newcastle Utd,2026-02-07,Matchweek 25,Home,,,,Brentford
+Newcastle Utd,2026-02-10,Matchweek 26,Away,,,,Tottenham
+Newcastle Utd,2026-02-21,Matchweek 27,Away,,,,Manchester City
+Newcastle Utd,2026-02-28,Matchweek 28,Home,,,,Everton
+Newcastle Utd,2026-03-04,Matchweek 29,Home,,,,Manchester Utd
+Newcastle Utd,2026-03-14,Matchweek 30,Away,,,,Chelsea
+Newcastle Utd,2026-03-21,Matchweek 31,Home,,,,Sunderland
+Newcastle Utd,2026-04-11,Matchweek 32,Away,,,,Crystal Palace
+Newcastle Utd,2026-04-18,Matchweek 33,Home,,,,Bournemouth
+Newcastle Utd,2026-04-25,Matchweek 34,Away,,,,Arsenal
+Newcastle Utd,2026-05-02,Matchweek 35,Home,,,,Brighton
+Newcastle Utd,2026-05-09,Matchweek 36,Away,,,,Nott'ham Forest
+Newcastle Utd,2026-05-17,Matchweek 37,Home,,,,West Ham
+Newcastle Utd,2026-05-24,Matchweek 38,Away,,,,Fulham
+Nott'ham Forest,2025-08-17,Matchweek 1,Home,W,3,1,Brentford
+Nott'ham Forest,2025-08-24,Matchweek 2,Away,D,1,1,Crystal Palace
+Nott'ham Forest,2025-08-31,Matchweek 3,Home,L,0,3,West Ham
+Nott'ham Forest,2025-09-13,Matchweek 4,Away,L,0,3,Arsenal
+Nott'ham Forest,2025-09-20,Matchweek 5,Away,D,1,1,Burnley
+Nott'ham Forest,2025-09-27,Matchweek 6,Home,L,0,1,Sunderland
+Nott'ham Forest,2025-10-05,Matchweek 7,Away,L,0,2,Newcastle Utd
+Nott'ham Forest,2025-10-18,Matchweek 8,Home,L,0,3,Chelsea
+Nott'ham Forest,2025-10-26,Matchweek 9,Away,L,0,2,Bournemouth
+Nott'ham Forest,2025-11-01,Matchweek 10,Home,D,2,2,Manchester Utd
+Nott'ham Forest,2025-11-09,Matchweek 11,Home,W,3,1,Leeds United
+Nott'ham Forest,2025-11-22,Matchweek 12,Away,W,3,0,Liverpool
+Nott'ham Forest,2025-11-30,Matchweek 13,Home,L,0,2,Brighton
+Nott'ham Forest,2025-12-03,Matchweek 14,Away,W,1,0,Wolves
+Nott'ham Forest,2025-12-06,Matchweek 15,Away,L,0,3,Everton
+Nott'ham Forest,2025-12-14,Matchweek 16,Home,W,3,0,Tottenham
+Nott'ham Forest,2025-12-22,Matchweek 17,Away,L,0,1,Fulham
+Nott'ham Forest,2025-12-27,Matchweek 18,Home,L,1,2,Manchester City
+Nott'ham Forest,2025-12-30,Matchweek 19,Home,L,0,2,Everton
+Nott'ham Forest,2026-01-03,Matchweek 20,Away,L,1,3,Aston Villa
+Nott'ham Forest,2026-01-06,Matchweek 21,Away,W,2,1,West Ham
+Nott'ham Forest,2026-01-17,Matchweek 22,Home,,,,Arsenal
+Nott'ham Forest,2026-01-25,Matchweek 23,Away,,,,Brentford
+Nott'ham Forest,2026-02-01,Matchweek 24,Home,,,,Crystal Palace
+Nott'ham Forest,2026-02-06,Matchweek 25,Away,,,,Leeds United
+Nott'ham Forest,2026-02-11,Matchweek 26,Home,,,,Wolves
+Nott'ham Forest,2026-02-21,Matchweek 27,Home,,,,Liverpool
+Nott'ham Forest,2026-02-28,Matchweek 28,Away,,,,Brighton
+Nott'ham Forest,2026-03-04,Matchweek 29,Away,,,,Manchester City
+Nott'ham Forest,2026-03-14,Matchweek 30,Home,,,,Fulham
+Nott'ham Forest,2026-03-21,Matchweek 31,Away,,,,Tottenham
+Nott'ham Forest,2026-04-11,Matchweek 32,Home,,,,Aston Villa
+Nott'ham Forest,2026-04-18,Matchweek 33,Home,,,,Burnley
+Nott'ham Forest,2026-04-25,Matchweek 34,Away,,,,Sunderland
+Nott'ham Forest,2026-05-02,Matchweek 35,Away,,,,Chelsea
+Nott'ham Forest,2026-05-09,Matchweek 36,Home,,,,Newcastle Utd
+Nott'ham Forest,2026-05-17,Matchweek 37,Away,,,,Manchester Utd
+Nott'ham Forest,2026-05-24,Matchweek 38,Home,,,,Bournemouth
+Sunderland,2025-08-16,Matchweek 1,Home,W,3,0,West Ham
+Sunderland,2025-08-23,Matchweek 2,Away,L,0,2,Burnley
+Sunderland,2025-08-30,Matchweek 3,Home,W,2,1,Brentford
+Sunderland,2025-09-13,Matchweek 4,Away,D,0,0,Crystal Palace
+Sunderland,2025-09-21,Matchweek 5,Home,D,1,1,Aston Villa
+Sunderland,2025-09-27,Matchweek 6,Away,W,1,0,Nott'ham Forest
+Sunderland,2025-10-04,Matchweek 7,Away,L,0,2,Manchester Utd
+Sunderland,2025-10-18,Matchweek 8,Home,W,2,0,Wolves
+Sunderland,2025-10-25,Matchweek 9,Away,W,2,1,Chelsea
+Sunderland,2025-11-03,Matchweek 10,Home,D,1,1,Everton
+Sunderland,2025-11-08,Matchweek 11,Home,D,2,2,Arsenal
+Sunderland,2025-11-22,Matchweek 12,Away,L,0,1,Fulham
+Sunderland,2025-11-29,Matchweek 13,Home,W,3,2,Bournemouth
+Sunderland,2025-12-03,Matchweek 14,Away,D,1,1,Liverpool
+Sunderland,2025-12-06,Matchweek 15,Away,L,0,3,Manchester City
+Sunderland,2025-12-14,Matchweek 16,Home,W,1,0,Newcastle Utd
+Sunderland,2025-12-20,Matchweek 17,Away,D,0,0,Brighton
+Sunderland,2025-12-28,Matchweek 18,Home,D,1,1,Leeds United
+Sunderland,2026-01-01,Matchweek 19,Home,D,0,0,Manchester City
+Sunderland,2026-01-04,Matchweek 20,Away,D,1,1,Tottenham
+Sunderland,2026-01-07,Matchweek 21,Away,L,0,3,Brentford
+Sunderland,2026-01-17,Matchweek 22,Home,,,,Crystal Palace
+Sunderland,2026-01-24,Matchweek 23,Away,,,,West Ham
+Sunderland,2026-02-02,Matchweek 24,Home,,,,Burnley
+Sunderland,2026-02-07,Matchweek 25,Away,,,,Arsenal
+Sunderland,2026-02-11,Matchweek 26,Home,,,,Liverpool
+Sunderland,2026-02-22,Matchweek 27,Home,,,,Fulham
+Sunderland,2026-02-28,Matchweek 28,Away,,,,Bournemouth
+Sunderland,2026-03-04,Matchweek 29,Away,,,,Leeds United
+Sunderland,2026-03-14,Matchweek 30,Home,,,,Brighton
+Sunderland,2026-03-21,Matchweek 31,Away,,,,Newcastle Utd
+Sunderland,2026-04-11,Matchweek 32,Home,,,,Tottenham
+Sunderland,2026-04-18,Matchweek 33,Away,,,,Aston Villa
+Sunderland,2026-04-25,Matchweek 34,Home,,,,Nott'ham Forest
+Sunderland,2026-05-02,Matchweek 35,Away,,,,Wolves
+Sunderland,2026-05-09,Matchweek 36,Home,,,,Manchester Utd
+Sunderland,2026-05-17,Matchweek 37,Away,,,,Everton
+Sunderland,2026-05-24,Matchweek 38,Home,,,,Chelsea
+Tottenham,2025-08-16,Matchweek 1,Home,W,3,0,Burnley
+Tottenham,2025-08-23,Matchweek 2,Away,W,2,0,Manchester City
+Tottenham,2025-08-30,Matchweek 3,Home,L,0,1,Bournemouth
+Tottenham,2025-09-13,Matchweek 4,Away,W,3,0,West Ham
+Tottenham,2025-09-20,Matchweek 5,Away,D,2,2,Brighton
+Tottenham,2025-09-27,Matchweek 6,Home,D,1,1,Wolves
+Tottenham,2025-10-04,Matchweek 7,Away,W,2,1,Leeds United
+Tottenham,2025-10-19,Matchweek 8,Home,L,1,2,Aston Villa
+Tottenham,2025-10-26,Matchweek 9,Away,W,3,0,Everton
+Tottenham,2025-11-01,Matchweek 10,Home,L,0,1,Chelsea
+Tottenham,2025-11-08,Matchweek 11,Home,D,2,2,Manchester Utd
+Tottenham,2025-11-23,Matchweek 12,Away,L,1,4,Arsenal
+Tottenham,2025-11-29,Matchweek 13,Home,L,1,2,Fulham
+Tottenham,2025-12-02,Matchweek 14,Away,D,2,2,Newcastle Utd
+Tottenham,2025-12-06,Matchweek 15,Home,W,2,0,Brentford
+Tottenham,2025-12-14,Matchweek 16,Away,L,0,3,Nott'ham Forest
+Tottenham,2025-12-20,Matchweek 17,Home,L,1,2,Liverpool
+Tottenham,2025-12-28,Matchweek 18,Away,W,1,0,Crystal Palace
+Tottenham,2026-01-01,Matchweek 19,Away,D,0,0,Brentford
+Tottenham,2026-01-04,Matchweek 20,Home,D,1,1,Sunderland
+Tottenham,2026-01-07,Matchweek 21,Away,L,2,3,Bournemouth
+Tottenham,2026-01-17,Matchweek 22,Home,,,,West Ham
+Tottenham,2026-01-24,Matchweek 23,Away,,,,Burnley
+Tottenham,2026-02-01,Matchweek 24,Home,,,,Manchester City
+Tottenham,2026-02-07,Matchweek 25,Away,,,,Manchester Utd
+Tottenham,2026-02-10,Matchweek 26,Home,,,,Newcastle Utd
+Tottenham,2026-02-22,Matchweek 27,Home,,,,Arsenal
+Tottenham,2026-03-01,Matchweek 28,Away,,,,Fulham
+Tottenham,2026-03-04,Matchweek 29,Home,,,,Crystal Palace
+Tottenham,2026-03-14,Matchweek 30,Away,,,,Liverpool
+Tottenham,2026-03-21,Matchweek 31,Home,,,,Nott'ham Forest
+Tottenham,2026-04-11,Matchweek 32,Away,,,,Sunderland
+Tottenham,2026-04-18,Matchweek 33,Home,,,,Brighton
+Tottenham,2026-04-25,Matchweek 34,Away,,,,Wolves
+Tottenham,2026-05-02,Matchweek 35,Away,,,,Aston Villa
+Tottenham,2026-05-09,Matchweek 36,Home,,,,Leeds United
+Tottenham,2026-05-17,Matchweek 37,Away,,,,Chelsea
+Tottenham,2026-05-24,Matchweek 38,Home,,,,Everton
+West Ham,2025-08-16,Matchweek 1,Away,L,0,3,Sunderland
+West Ham,2025-08-22,Matchweek 2,Home,L,1,5,Chelsea
+West Ham,2025-08-31,Matchweek 3,Away,W,3,0,Nott'ham Forest
+West Ham,2025-09-13,Matchweek 4,Home,L,0,3,Tottenham
+West Ham,2025-09-20,Matchweek 5,Home,L,1,2,Crystal Palace
+West Ham,2025-09-29,Matchweek 6,Away,D,1,1,Everton
+West Ham,2025-10-04,Matchweek 7,Away,L,0,2,Arsenal
+West Ham,2025-10-20,Matchweek 8,Home,L,0,2,Brentford
+West Ham,2025-10-24,Matchweek 9,Away,L,1,2,Leeds United
+West Ham,2025-11-02,Matchweek 10,Home,W,3,1,Newcastle Utd
+West Ham,2025-11-08,Matchweek 11,Home,W,3,2,Burnley
+West Ham,2025-11-22,Matchweek 12,Away,D,2,2,Bournemouth
+West Ham,2025-11-30,Matchweek 13,Home,L,0,2,Liverpool
+West Ham,2025-12-04,Matchweek 14,Away,D,1,1,Manchester Utd
+West Ham,2025-12-07,Matchweek 15,Away,D,1,1,Brighton
+West Ham,2025-12-14,Matchweek 16,Home,L,2,3,Aston Villa
+West Ham,2025-12-20,Matchweek 17,Away,L,0,3,Manchester City
+West Ham,2025-12-27,Matchweek 18,Home,L,0,1,Fulham
+West Ham,2025-12-30,Matchweek 19,Home,D,2,2,Brighton
+West Ham,2026-01-03,Matchweek 20,Away,L,0,3,Wolves
+West Ham,2026-01-06,Matchweek 21,Home,L,1,2,Nott'ham Forest
+West Ham,2026-01-17,Matchweek 22,Away,,,,Tottenham
+West Ham,2026-01-24,Matchweek 23,Home,,,,Sunderland
+West Ham,2026-01-31,Matchweek 24,Away,,,,Chelsea
+West Ham,2026-02-07,Matchweek 25,Away,,,,Burnley
+West Ham,2026-02-10,Matchweek 26,Home,,,,Manchester Utd
+West Ham,2026-02-21,Matchweek 27,Home,,,,Bournemouth
+West Ham,2026-02-28,Matchweek 28,Away,,,,Liverpool
+West Ham,2026-03-04,Matchweek 29,Away,,,,Fulham
+West Ham,2026-03-14,Matchweek 30,Home,,,,Manchester City
+West Ham,2026-03-21,Matchweek 31,Away,,,,Aston Villa
+West Ham,2026-04-11,Matchweek 32,Home,,,,Wolves
+West Ham,2026-04-18,Matchweek 33,Away,,,,Crystal Palace
+West Ham,2026-04-25,Matchweek 34,Home,,,,Everton
+West Ham,2026-05-02,Matchweek 35,Away,,,,Brentford
+West Ham,2026-05-09,Matchweek 36,Home,,,,Arsenal
+West Ham,2026-05-17,Matchweek 37,Away,,,,Newcastle Utd
+West Ham,2026-05-24,Matchweek 38,Home,,,,Leeds United
+Wolves,2025-08-16,Matchweek 1,Home,L,0,4,Manchester City
+Wolves,2025-08-23,Matchweek 2,Away,L,0,1,Bournemouth
+Wolves,2025-08-30,Matchweek 3,Home,L,2,3,Everton
+Wolves,2025-09-13,Matchweek 4,Away,L,0,1,Newcastle Utd
+Wolves,2025-09-20,Matchweek 5,Home,L,1,3,Leeds United
+Wolves,2025-09-27,Matchweek 6,Away,D,1,1,Tottenham
+Wolves,2025-10-05,Matchweek 7,Home,D,1,1,Brighton
+Wolves,2025-10-18,Matchweek 8,Away,L,0,2,Sunderland
+Wolves,2025-10-26,Matchweek 9,Home,L,2,3,Burnley
+Wolves,2025-11-01,Matchweek 10,Away,L,0,3,Fulham
+Wolves,2025-11-08,Matchweek 11,Away,L,0,3,Chelsea
+Wolves,2025-11-22,Matchweek 12,Home,L,0,2,Crystal Palace
+Wolves,2025-11-30,Matchweek 13,Away,L,0,1,Aston Villa
+Wolves,2025-12-03,Matchweek 14,Home,L,0,1,Nott'ham Forest
+Wolves,2025-12-08,Matchweek 15,Home,L,1,4,Manchester Utd
+Wolves,2025-12-13,Matchweek 16,Away,L,1,2,Arsenal
+Wolves,2025-12-20,Matchweek 17,Home,L,0,2,Brentford
+Wolves,2025-12-27,Matchweek 18,Away,L,1,2,Liverpool
+Wolves,2025-12-30,Matchweek 19,Away,D,1,1,Manchester Utd
+Wolves,2026-01-03,Matchweek 20,Home,W,3,0,West Ham
+Wolves,2026-01-07,Matchweek 21,Away,D,1,1,Everton
+Wolves,2026-01-18,Matchweek 22,Home,,,,Newcastle Utd
+Wolves,2026-01-24,Matchweek 23,Away,,,,Manchester City
+Wolves,2026-01-31,Matchweek 24,Home,,,,Bournemouth
+Wolves,2026-02-07,Matchweek 25,Home,,,,Chelsea
+Wolves,2026-02-11,Matchweek 26,Away,,,,Nott'ham Forest
+Wolves,2026-02-21,Matchweek 27,Away,,,,Crystal Palace
+Wolves,2026-02-27,Matchweek 28,Home,,,,Aston Villa
+Wolves,2026-03-04,Matchweek 29,Home,,,,Liverpool
+Wolves,2026-03-14,Matchweek 30,Away,,,,Brentford
+Wolves,2026-03-21,Matchweek 31,Home,,,,Arsenal
+Wolves,2026-04-11,Matchweek 32,Away,,,,West Ham
+Wolves,2026-04-18,Matchweek 33,Away,,,,Leeds United
+Wolves,2026-04-25,Matchweek 34,Home,,,,Tottenham
+Wolves,2026-05-02,Matchweek 35,Home,,,,Sunderland
+Wolves,2026-05-09,Matchweek 36,Away,,,,Brighton
+Wolves,2026-05-17,Matchweek 37,Home,,,,Fulham
+Wolves,2026-05-24,Matchweek 38,Away,,,,Burnley

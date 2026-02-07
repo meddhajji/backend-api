@@ -1,0 +1,116 @@
+{
+  "XGBoost": {
+    "metrics": {
+      "r2": 0.7849662659721934,
+      "mae": 1249.9804724893565,
+      "rmse": 2560.0670937729597,
+      "mape": 26.165778661335153,
+      "median_error": 590.3735351562555,
+      "within_10pct": 37.84764207980653,
+      "within_15pct": 50.34260378879484,
+      "within_20pct": 59.572752922208785
+    },
+    "tuning": {
+      "best_params": {
+        "subsample": 0.8,
+        "reg_lambda": 2,
+        "reg_alpha": 0,
+        "n_estimators": 600,
+        "max_depth": 8,
+        "learning_rate": 0.03,
+        "colsample_bytree": 0.8
+      },
+      "best_score": 0.240946344075329,
+      "tune_time": 1054.2683780193329
+    },
+    "feature_names": [
+      "screen_size",
+      "refresh_rate",
+      "cpu_generation",
+      "ram_gb",
+      "storage_gb",
+      "cpu_score",
+      "gpu_score",
+      "ram_score",
+      "storage_score",
+      "screen_score",
+      "condition_score",
+      "laptop_score",
+      "is_shop",
+      "has_delivery",
+      "is_new",
+      "is_touchscreen",
+      "is_ssd",
+      "brand",
+      "model",
+      "cpu",
+      "ram",
+      "storage",
+      "gpu",
+      "city",
+      "cpu_family",
+      "gpu_type",
+      "gpu_family",
+      "model_num",
+      "gpu_vram"
+    ],
+    "missing_handling": "median_imputation_for_numeric_unknown_for_categorical"
+  },
+  "CatBoost": {
+    "metrics": {
+      "r2": 0.7726606542242298,
+      "mae": 1280.068747316304,
+      "rmse": 2632.299807960586,
+      "mape": 25.947464677780136,
+      "median_error": 594.9339173609533,
+      "within_10pct": 36.2353889560661,
+      "within_15pct": 48.3272873841193,
+      "within_20pct": 57.79927448609432
+    },
+    "tuning": {
+      "best_params": {
+        "iterations": 600,
+        "depth": 10,
+        "learning_rate": 0.05,
+        "l2_leaf_reg": 1
+      },
+      "best_score": 0.24014864411366282,
+      "tune_time": 4976.8061282634735
+    },
+    "feature_names": [
+      "screen_size",
+      "refresh_rate",
+      "cpu_generation",
+      "ram_gb",
+      "storage_gb",
+      "cpu_score",
+      "gpu_score",
+      "ram_score",
+      "storage_score",
+      "screen_score",
+      "condition_score",
+      "laptop_score",
+      "is_shop",
+      "has_delivery",
+      "is_new",
+      "is_touchscreen",
+      "is_ssd",
+      "brand",
+      "model",
+      "cpu",
+      "ram",
+      "storage",
+      "gpu",
+      "city",
+      "cpu_family",
+      "gpu_type",
+      "gpu_family",
+      "model_num",
+      "gpu_vram"
+    ],
+    "missing_handling": "native_catboost_handling"
+  },
+  "winner": "XGBoost",
+  "xgb_wins": 7,
+  "cat_wins": 1
+}
