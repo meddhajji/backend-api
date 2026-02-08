@@ -1,27 +1,24 @@
 """
-Refresh Scraper API Router (v2 - Two-Phase Progress)
-=====================================================
-Endpoint with:
-- Separate scraping and recognition progress bars
-- Multi-key parallel LLM processing
-- Smart NaN threshold filtering
+Refresh Scraper API Router
+===========================
+Clean pipeline:
+1. Scrape raw listings (no parsing) - fast
+2. Compare with database (using link as unique key)
+3. Parse only NEW items with parallel processing
+4. Update database with new/sold/price-changed items
 """
 import os
 import sys
-import asyncio
-from typing import Dict, Any, List, Set, Optional
-from fastapi import APIRouter, BackgroundTasks, HTTPException
+from typing import Dict, Any, List
+from fastapi import APIRouter, BackgroundTasks
 from pydantic import BaseModel
 from datetime import datetime
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from db import get_client
 
-from scraper.scraper import scrape_all
-from scraper.parser import LaptopListing
-# from scraper.multi_cleaner import MultiKeyDataCleaner, count_nan_fields, get_nan_threshold
-from scraper.multi_cleaner import count_nan_fields, get_nan_threshold
-import pandas as pd
+from scraper.scraper import scrape_raw, process_listing
 
 router = APIRouter(prefix="/api/refresh", tags=["refresh"])
 
@@ -35,20 +32,17 @@ class RefreshStatus(BaseModel):
     scraping_complete: bool = False
     scraping_message: str = ""
     
-    # Phase 2: Recognition
-    recognition_progress: float = 0.0
-    recognition_complete: bool = False
-    recognition_message: str = ""
-    items_to_recognize: int = 0
-    regex_done: int = 0
-    llm_queued: int = 0
-    llm_done: int = 0
+    # Phase 2: Parsing (new items only)
+    parsing_progress: float = 0.0
+    parsing_complete: bool = False
+    parsing_message: str = ""
     
-    # Stats (populated after scraping completes)
+    # Stats
     new_count: int = 0
     sold_count: int = 0
     price_changed_count: int = 0
     total_scraped: int = 0
+    items_added: int = 0
 
 
 class RefreshResponse(BaseModel):
@@ -56,7 +50,7 @@ class RefreshResponse(BaseModel):
     message: str
 
 
-# Global status tracker with phase separation
+# Global status tracker
 _refresh_status: Dict[str, Any] = {
     "running": False,
     "last_run": None,
@@ -66,45 +60,58 @@ _refresh_status: Dict[str, Any] = {
     "scraping_complete": False,
     "scraping_message": "",
     # Phase 2
-    "recognition_progress": 0.0,
-    "recognition_complete": False,
-    "recognition_message": "",
-    "items_to_recognize": 0,
-    "regex_done": 0,
-    "llm_queued": 0,
-    "llm_done": 0,
+    "parsing_progress": 0.0,
+    "parsing_complete": False,
+    "parsing_message": "",
     # Stats
     "new_count": 0,
     "sold_count": 0,
     "price_changed_count": 0,
     "total_scraped": 0,
+    "items_added": 0,
 }
 
 
 def get_existing_db_data() -> Dict[str, Dict[str, Any]]:
     """Get all existing laptop links with price/sold status."""
     client = get_client()
-    response = client.table('laptops').select('link, price, last_price, is_sold, is_new_listing').execute()
-    return {
-        row['link']: {
-            'price': row['price'],
-            'last_price': row.get('last_price'),
-            'is_sold': row['is_sold'],
-            'is_new_listing': row['is_new_listing']
-        }
-        for row in response.data if row.get('link')
-    }
+    all_data = {}
+    offset = 0
+    batch_size = 1000
+    
+    while True:
+        response = client.table('laptops').select(
+            'link, price, last_price, is_sold, is_new_listing'
+        ).range(offset, offset + batch_size - 1).execute()
+        
+        if not response.data:
+            break
+        
+        for row in response.data:
+            if row.get('link'):
+                all_data[row['link']] = {
+                    'price': row['price'],
+                    'last_price': row.get('last_price'),
+                    'is_sold': row['is_sold'],
+                    'is_new_listing': row['is_new_listing']
+                }
+        
+        if len(response.data) < batch_size:
+            break
+        offset += batch_size
+    
+    return all_data
 
 
-def count_specs_identified(listing_dict: Dict) -> int:
-    """Count how many key specs are identified (not None)."""
-    key_specs = ['cpu', 'ram', 'storage', 'gpu', 'brand', 'model']
-    identified = 0
-    for spec in key_specs:
-        val = listing_dict.get(spec)
-        if val is not None and str(val).lower() not in ['unknown', 'none', 'nan', '']:
-            identified += 1
-    return identified
+def parse_item_wrapper(raw: dict) -> dict | None:
+    """Wrapper for process_listing to use in ThreadPoolExecutor."""
+    listing = process_listing(raw)
+    if listing:
+        result = listing.to_dict()
+        result['is_new_listing'] = True
+        result['is_sold'] = False
+        return result
+    return None
 
 
 async def process_refresh(pages: int = 500):
@@ -121,83 +128,117 @@ async def process_refresh(pages: int = 500):
             "scraping_progress": 0.0,
             "scraping_complete": False,
             "scraping_message": "Starting...",
-            "recognition_progress": 0.0,
-            "recognition_complete": False,
-            "recognition_message": "",
-            "items_to_recognize": 0,
-            "regex_done": 0,
-            "llm_queued": 0,
-            "llm_done": 0,
+            "parsing_progress": 0.0,
+            "parsing_complete": False,
+            "parsing_message": "",
             "new_count": 0,
             "sold_count": 0,
             "price_changed_count": 0,
             "total_scraped": 0,
+            "items_added": 0,
         })
         
         # ============================================
-        # PHASE 1: SCRAPING (0-100%)
+        # PHASE 1: SCRAPING RAW (0-100% of scraping bar)
         # ============================================
         def scraper_progress(pct: float, msg: str, stats: Dict):
             _refresh_status["scraping_progress"] = pct
             _refresh_status["scraping_message"] = msg
             _refresh_status["total_scraped"] = stats.get('total_raw', 0)
         
-        scraped_listings: List[LaptopListing] = await scrape_all(
+        raw_listings, scrape_stats = await scrape_raw(
             max_pages=pages,
-            progress_callback=scraper_progress,
-            skip_filtering=True
+            progress_callback=scraper_progress
         )
         
-        total_scraped = len(scraped_listings)
+        total_scraped = len(raw_listings)
         _refresh_status["scraping_progress"] = 100.0
         _refresh_status["scraping_complete"] = True
-        _refresh_status["scraping_message"] = f"Scraped {total_scraped} items"
+        _refresh_status["scraping_message"] = f"Scraped {total_scraped} listings"
         _refresh_status["total_scraped"] = total_scraped
         
         # ============================================
-        # DATABASE COMPARISON
+        # PHASE 2: DATABASE COMPARISON
         # ============================================
+        _refresh_status["parsing_message"] = "Comparing with database..."
+        
         db_data = get_existing_db_data()
         existing_links = set(db_data.keys())
-        scraped_links = {l.link for l in scraped_listings}
+        scraped_links = {item['link'] for item in raw_listings if item.get('link')}
         
+        # Set operations for fast comparison
+        new_links = scraped_links - existing_links
+        sold_links = existing_links - scraped_links
+        common_links = scraped_links & existing_links
+        
+        # Find price changes in common items
+        price_changes: List[Dict] = []
+        scraped_by_link = {item['link']: item for item in raw_listings if item.get('link')}
+        
+        for link in common_links:
+            scraped_item = scraped_by_link[link]
+            db_item = db_data[link]
+            
+            scraped_price = scraped_item.get('price', 0)
+            db_price = db_item.get('price', 0)
+            
+            # Check if price changed
+            if db_price and scraped_price and abs(db_price - scraped_price) > 0.01:
+                price_changes.append({
+                    'link': link,
+                    'new_price': scraped_price,
+                    'old_price': db_price
+                })
+        
+        # Get raw items that are new
+        new_raw_items = [scraped_by_link[link] for link in new_links]
+        
+        # Update stats
+        _refresh_status["new_count"] = len(new_raw_items)
+        _refresh_status["sold_count"] = len(sold_links)
+        _refresh_status["price_changed_count"] = len(price_changes)
+        
+        # ============================================
+        # PHASE 3: PARSE NEW ITEMS (with parallel processing)
+        # ============================================
+        parsed_new_items: List[Dict] = []
+        
+        if new_raw_items:
+            total_new = len(new_raw_items)
+            _refresh_status["parsing_message"] = f"Parsing {total_new} new items..."
+            
+            # Use ThreadPoolExecutor for parallel parsing
+            max_workers = min(8, max(4, total_new // 10))
+            completed_count = 0
+            
+            with ThreadPoolExecutor(max_workers=max_workers) as executor:
+                futures = {executor.submit(parse_item_wrapper, raw): raw for raw in new_raw_items}
+                
+                for future in as_completed(futures):
+                    result = future.result()
+                    if result:
+                        parsed_new_items.append(result)
+                    
+                    completed_count += 1
+                    if completed_count % 10 == 0 or completed_count == total_new:
+                        pct = (completed_count / total_new) * 100
+                        _refresh_status["parsing_progress"] = pct
+                        _refresh_status["parsing_message"] = f"Parsed {completed_count}/{total_new} new items"
+            
+            _refresh_status["parsing_progress"] = 100.0
+            _refresh_status["parsing_complete"] = True
+            _refresh_status["parsing_message"] = f"Parsed {len(parsed_new_items)} new items"
+        else:
+            _refresh_status["parsing_progress"] = 100.0
+            _refresh_status["parsing_complete"] = True
+            _refresh_status["parsing_message"] = "No new items to parse"
+        
+        # ============================================
+        # PHASE 4: DATABASE UPDATES
+        # ============================================
         client = get_client()
         
-        # Categorize items
-        new_items: List[Dict] = []
-        update_items: List[Dict] = []
-        unchanged_items: List[Dict] = []
-        price_changed_count = 0
-        
-        for listing in scraped_listings:
-            link = listing.link
-            listing_dict = listing.to_dict()
-            
-            if link in existing_links:
-                prev_data = db_data[link]
-                prev_price = prev_data['price']
-                
-                if prev_price and listing.price and prev_price != listing.price:
-                    listing_dict['last_price'] = prev_price
-                    listing_dict['is_new_listing'] = False
-                    price_changed_count += 1
-                    update_items.append(listing_dict)
-                else:
-                    if prev_data.get('last_price'):
-                        listing_dict['last_price'] = prev_data['last_price']
-                    listing_dict['is_new_listing'] = False
-                    unchanged_items.append(listing_dict)
-                
-                listing_dict['is_sold'] = False
-            else:
-                listing_dict['is_new_listing'] = True
-                listing_dict['is_sold'] = False
-                new_items.append(listing_dict)
-        
-        # Handle sold items
-        sold_links = existing_links - scraped_links
-        sold_count = len(sold_links)
-        
+        # 1. Mark sold items
         if sold_links:
             sold_list = list(sold_links)
             chunk_size = 100
@@ -205,85 +246,45 @@ async def process_refresh(pages: int = 500):
                 chunk = sold_list[i:i+chunk_size]
                 client.table('laptops').update({'is_sold': True}).in_('link', chunk).execute()
         
-        # Update stats
-        _refresh_status["new_count"] = len(new_items)
-        _refresh_status["sold_count"] = sold_count
-        _refresh_status["price_changed_count"] = price_changed_count
-        _refresh_status["items_to_recognize"] = len(new_items)
+        # 2. Update price changes
+        if price_changes:
+            for change in price_changes:
+                client.table('laptops').update({
+                    'price': change['new_price'],
+                    'last_price': change['old_price'],
+                    'is_sold': False,  # If it reappeared, it's not sold anymore
+                    'is_new_listing': False
+                }).eq('link', change['link']).execute()
         
-        # ============================================
-        # PHASE 2: RECOGNITION (only NEW items)
-        # ============================================
-        if new_items:
-            _refresh_status["recognition_message"] = f"Processing {len(new_items)} new items..."
-            
-            # Step 2a: Count regex-identified vs needs-LLM
-            threshold = get_nan_threshold(len(new_items))
-            regex_complete = []
-            needs_llm = []
-            
-            for item in new_items:
-                nan_count = count_nan_fields(item)
-                if nan_count <= threshold:
-                    regex_complete.append(item)
-                else:
-                    needs_llm.append(item)
-            
-            _refresh_status["regex_done"] = len(regex_complete)
-            _refresh_status["llm_queued"] = len(needs_llm)
-            _refresh_status["recognition_progress"] = (len(regex_complete) / len(new_items)) * 100 if new_items else 100
-            _refresh_status["recognition_message"] = f"Regex: {len(regex_complete)}, LLM: {len(needs_llm)}"
-            
-            # Step 2b: LLM processing SKIPPED (User request: Regex only)
-            # The scraping phase already applied regex parsing via parser.py
-            
-            _refresh_status["recognition_progress"] = 100.0
-            _refresh_status["recognition_complete"] = True
-            _refresh_status["recognition_message"] = f"Processed {len(new_items)} new items (Regex Only)"
-            
-            # Combine all items for saving
-            # new_items already contains the regex-parsed data
-
-            
-            _refresh_status["recognition_progress"] = 100.0
-            _refresh_status["recognition_complete"] = True
-            _refresh_status["recognition_message"] = f"Done: {len(new_items)} items processed"
-        else:
-            _refresh_status["recognition_progress"] = 100.0
-            _refresh_status["recognition_complete"] = True
-            _refresh_status["recognition_message"] = "No new items to process"
-        
-        # ============================================
-        # SAVE TO DATABASE
-        # ============================================
-        all_items = new_items + update_items + unchanged_items
-        
-        if all_items:
+        # 3. Insert new parsed items
+        items_added = 0
+        if parsed_new_items:
             chunk_size = 100
-            for i in range(0, len(all_items), chunk_size):
-                chunk = all_items[i:i+chunk_size]
-                client.table('laptops').upsert(chunk, on_conflict="link").execute()
+            for i in range(0, len(parsed_new_items), chunk_size):
+                chunk = parsed_new_items[i:i+chunk_size]
+                result = client.table('laptops').upsert(chunk, on_conflict="link").execute()
+                if result.data:
+                    items_added += len(result.data)
+        
+        _refresh_status["items_added"] = items_added
         
         # ============================================
         # COMPLETE
         # ============================================
         _refresh_status["result"] = RefreshStatus(
             status="completed",
-            message=f"Complete. {len(new_items)} new, {sold_count} sold, {price_changed_count} price changes.",
+            message=f"Done! {items_added} new, {len(sold_links)} sold, {len(price_changes)} price changes.",
             scraping_progress=100.0,
             scraping_complete=True,
-            scraping_message=f"Scraped {total_scraped} items",
-            recognition_progress=100.0,
-            recognition_complete=True,
-            recognition_message=f"Processed {len(new_items)} new items",
-            items_to_recognize=len(new_items),
-            regex_done=_refresh_status.get("regex_done", 0),
-            llm_queued=_refresh_status.get("llm_queued", 0),
-            llm_done=_refresh_status.get("llm_done", 0),
-            new_count=len(new_items),
-            sold_count=sold_count,
-            price_changed_count=price_changed_count,
-            total_scraped=total_scraped
+            scraping_message=f"Scraped {total_scraped} listings",
+            parsing_progress=100.0,
+            parsing_complete=True,
+            parsing_message=f"Parsed {len(parsed_new_items)} new items",
+            new_count=len(new_raw_items),
+            sold_count=len(sold_links),
+            price_changed_count=len(price_changes),
+            total_scraped=total_scraped,
+            items_added=items_added
         )
         
     except Exception as e:
@@ -302,7 +303,7 @@ async def process_refresh(pages: int = 500):
 
 @router.post("/start", response_model=RefreshResponse)
 async def start_refresh(background_tasks: BackgroundTasks, pages: int = 500):
-    """Start incremental refresh scraping."""
+    """Start refresh scraping."""
     global _refresh_status
     
     if _refresh_status["running"]:
@@ -321,21 +322,18 @@ async def get_refresh_status():
     if _refresh_status["running"]:
         return RefreshStatus(
             status="running",
-            message=_refresh_status.get("scraping_message", "") or _refresh_status.get("recognition_message", ""),
+            message=_refresh_status.get("scraping_message", "") or _refresh_status.get("parsing_message", ""),
             scraping_progress=_refresh_status.get("scraping_progress", 0.0),
             scraping_complete=_refresh_status.get("scraping_complete", False),
             scraping_message=_refresh_status.get("scraping_message", ""),
-            recognition_progress=_refresh_status.get("recognition_progress", 0.0),
-            recognition_complete=_refresh_status.get("recognition_complete", False),
-            recognition_message=_refresh_status.get("recognition_message", ""),
-            items_to_recognize=_refresh_status.get("items_to_recognize", 0),
-            regex_done=_refresh_status.get("regex_done", 0),
-            llm_queued=_refresh_status.get("llm_queued", 0),
-            llm_done=_refresh_status.get("llm_done", 0),
+            parsing_progress=_refresh_status.get("parsing_progress", 0.0),
+            parsing_complete=_refresh_status.get("parsing_complete", False),
+            parsing_message=_refresh_status.get("parsing_message", ""),
             new_count=_refresh_status.get("new_count", 0),
             sold_count=_refresh_status.get("sold_count", 0),
             price_changed_count=_refresh_status.get("price_changed_count", 0),
-            total_scraped=_refresh_status.get("total_scraped", 0)
+            total_scraped=_refresh_status.get("total_scraped", 0),
+            items_added=_refresh_status.get("items_added", 0)
         )
     
     if _refresh_status["result"]:
