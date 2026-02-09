@@ -269,6 +269,78 @@ async def fetch_pages_batch(
 # SCRAPER LOGIC
 # =========================================================================
 
+async def scrape_raw(
+    max_pages: int = MAX_PAGES,
+    batch_size: int = BATCH_SIZE,
+    progress_callback: Optional[Callable[[float, str, Dict], None]] = None,
+) -> tuple[list[dict], dict]:
+    """
+    Scrape all pages and return RAW listings (no parsing).
+    
+    This is used by the refresh pipeline to:
+    1. Scrape fast (no regex parsing overhead)
+    2. Compare with DB using raw fields (link, title, description, price)
+    3. Only parse NEW items
+    
+    Returns:
+        tuple[list[dict], dict]: (raw_listings, stats)
+    """
+    all_listings: list[dict] = []
+    seen_links: set[str] = set()
+    
+    stats = {
+        'total_raw': 0,
+        'duplicates': 0,
+    }
+    
+    connector = aiohttp.TCPConnector(limit=10)
+    timeout = aiohttp.ClientTimeout(total=30)
+    
+    async with aiohttp.ClientSession(connector=connector, timeout=timeout) as session:
+        
+        with Progress(console=console) as progress:
+            task = progress.add_task(
+                "[cyan]Scraping pages (raw)...",
+                total=max_pages
+            )
+            
+            for batch_start in range(1, max_pages + 1, batch_size):
+                batch_end = min(batch_start + batch_size, max_pages + 1)
+                
+                # Fetch batch
+                raw_listings = await fetch_pages_batch(session, batch_start, batch_end)
+                stats['total_raw'] += len(raw_listings)
+                
+                # Deduplicate by link
+                for raw in raw_listings:
+                    link = raw.get('link')
+                    if link and link in seen_links:
+                        stats['duplicates'] += 1
+                        continue
+                    if link:
+                        seen_links.add(link)
+                    all_listings.append(raw)
+                
+                # Update progress
+                progress.update(task, advance=batch_end - batch_start)
+                
+                # Report progress via callback
+                if progress_callback:
+                    pct = min(100, (batch_end / max_pages) * 100)
+                    progress_callback(
+                        pct, 
+                        f"Scraping page {batch_start}-{min(batch_end - 1, max_pages)}",
+                        stats
+                    )
+                
+                # Rate limiting
+                if batch_end < max_pages:
+                    await asyncio.sleep(DELAY_BETWEEN_BATCHES)
+    
+    console.print(f"[green]✓ Scraped {len(all_listings)} raw listings[/green]")
+    return all_listings, stats
+
+
 def process_listing(raw: dict) -> LaptopListing | None:
     """
     Process a raw listing into a validated LaptopListing.
